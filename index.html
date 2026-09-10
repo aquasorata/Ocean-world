@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Ocean World — ความสวยงามของทะเลทั่วโลก" />
+  <title>Ocean World | ความสวยงามของทะเลทั่วโลก</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Mali:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="home">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Ocean World home">
+        <span class="brand-mark">🌊</span>
+        <span>
+          <strong>Ocean World</strong>
+          <small>Same Ocean · Brighter Tomorrow</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="active" href="#home">Home</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About Ocean</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-search">
+        <input id="searchInput" type="search" placeholder="Explore the Blue" aria-label="Search destinations" />
+        <button id="searchBtn" aria-label="Search">⌕</button>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="เปิดเมนู">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="ความสวยงามของทะเลทั่วโลก">
+      <img src="assets/hero.jpg" alt="ภาพทะเลและชายหาดสีฟ้า" />
+    </section>
+
+    <section class="quick-actions container reveal-stagger" aria-label="Explore ocean topics">
+      <a class="action-card" href="#destinations"><span class="action-icon">🌐</span><span><b>สำรวจ</b><small>Discover</small><em>ค้นพบความงามของทะเลทั่วโลก</em></span></a>
+      <a class="action-card" href="#about"><span class="action-icon">📖</span><span><b>เรียนรู้</b><small>Learn</small><em>เข้าใจธรรมชาติและความหลากหลาย</em></span></a>
+      <a class="action-card" href="#protect"><span class="action-icon">🌿</span><span><b>ร่วมรักษา</b><small>Protect</small><em>ดูแลทะเลให้คงความสวยงาม</em></span></a>
+      <a class="action-card" href="#contact"><span class="action-icon">👥</span><span><b>สร้างแรงบันดาลใจ</b><small>Inspire</small><em>ให้ทุกคนอยากออกไปเห็นโลกกว้าง</em></span></a>
+    </section>
+
+    <section class="destinations container reveal" id="destinations">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow">EXPLORE BREATHTAKING OCEAN DESTINATIONS</p>
+          <h2>จุดหมายปลายทางยอดนิยม</h2>
+        </div>
+        <button class="pill-btn ghost" id="showAllBtn">ดูทั้งหมด <span>→</span></button>
+      </div>
+
+      <div class="destination-grid reveal-stagger" id="destinationGrid">
+        <article class="destination-card" data-title="Maya Bay" data-country="ไทย Thailand">
+          <div class="number">1</div>
+          <img src="assets/dest_maya.jpg" alt="Maya Bay" />
+          <div class="card-body">
+            <h3>Maya Bay</h3>
+            <p class="country">📍 ไทย (Thailand)</p>
+            <p>อ่าวที่มีน้ำทะเลสีฟ้าใส หาดทรายขาว ล้อมรอบด้วยหน้าผาหินปูน</p>
+            <button class="pill-btn details-btn" data-place="Maya Bay">ดูรายละเอียด <span>→</span></button>
+          </div>
+        </article>
+        <article class="destination-card" data-title="Santorini" data-country="กรีซ Greece">
+          <div class="number">2</div>
+          <img src="assets/dest_santorini.jpg" alt="Santorini" />
+          <div class="card-body">
+            <h3>Santorini</h3>
+            <p class="country">📍 กรีซ (Greece)</p>
+            <p>เมืองริมทะเลที่มีบ้านสีขาวตัดกับน้ำเงิน บนหน้าผาสูง วิวพระอาทิตย์ตกสุดโรแมนติก</p>
+            <button class="pill-btn details-btn" data-place="Santorini">ดูรายละเอียด <span>→</span></button>
+          </div>
+        </article>
+        <article class="destination-card" data-title="Bora Bora" data-country="เฟรนช์โปลินีเซีย French Polynesia">
+          <div class="number">3</div>
+          <img src="assets/dest_bora.jpg" alt="Bora Bora" />
+          <div class="card-body">
+            <h3>Bora Bora</h3>
+            <p class="country">📍 เฟรนช์โปลินีเซีย (French Polynesia)</p>
+            <p>ทะเลสีฟ้า รีสอร์ทกลางน้ำ และธรรมชาติที่สวยงามจากทุกมุม</p>
+            <button class="pill-btn details-btn" data-place="Bora Bora">ดูรายละเอียด <span>→</span></button>
+          </div>
+        </article>
+      </div>
+      <div class="empty-state" id="emptyState" hidden>ไม่พบสถานที่ที่ตรงกับคำค้นหา</div>
+    </section>
+
+    <section class="gallery-section container reveal" id="gallery">
+      <div class="gallery-copy">
+        <p class="eyebrow">MORE THAN JUST A DESTINATION</p>
+        <h2>ความงามที่มากกว่าภาพถ่าย</h2>
+      </div>
+      <div class="gallery-layout">
+        <div class="polaroid-grid reveal-stagger">
+          <figure class="polaroid tilt-a"><img src="assets/gallery_marine.jpg" alt="ชีวิตใต้ทะเล" /><figcaption>Colorful Marine Life</figcaption></figure>
+          <figure class="polaroid tilt-b"><img src="assets/gallery_sunset.jpg" alt="พระอาทิตย์ตกทะเล" /><figcaption>Magical Sunsets</figcaption></figure>
+          <figure class="polaroid tilt-c"><img src="assets/gallery_manta.jpg" alt="กระเบนราหูใต้ทะเล" /><figcaption>Amazing Creatures</figcaption></figure>
+          <figure class="polaroid tilt-d"><img src="assets/gallery_beach.jpg" alt="ชายหาดเงียบสงบ" /><figcaption>Peaceful Beaches</figcaption></figure>
+        </div>
+        <aside class="quote-card">
+          <span>“</span>
+          <p>ทะเล...<br>เชื่อมเรากับโลกใบเดียวกัน</p>
+          <small>SAME OCEAN · DIFFERENT STORIES</small>
+        </aside>
+      </div>
+    </section>
+
+    <section class="facts container reveal" id="about">
+      <div class="fact-heading"><p>รู้ไหม ?</p><small>GOOD OCEAN FACTS</small></div>
+      <div class="fact-item"><b>71%</b><span>ของพื้นผิวโลก<br>คือมหาสมุทร</span></div>
+      <div class="fact-item"><b>230,000+</b><span>สายพันธุ์<br>อาศัยอยู่ในทะเล</span></div>
+      <div class="fact-item"><b>🌱</b><span>ทะเลช่วยดูดซับ<br>คาร์บอนไดออกไซด์และควบคุมสภาพอากาศ</span></div>
+      <div class="fact-item"><b>♥</b><span>เราทุกคน<br>สามารถช่วยรักษาทะเลได้ในชีวิตประจำวัน</span></div>
+    </section>
+
+    <section class="cta reveal" id="protect">
+      <div class="cta-watermark">🐋</div>
+      <div class="cta-inner container">
+        <div>
+          <h2>มาร่วมเป็นส่วนหนึ่งในการดูแลทะเลไปด้วยกัน</h2>
+          <p>CLEAN OCEAN · HEALTHY PLANET · BRIGHTER TOMORROW</p>
+        </div>
+        <button class="pill-btn white" id="startBtn">เริ่มจากสิ่งเล็ก ๆ วันนี้ <span>→</span></button>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="reveal">
+    <div class="container footer-wrap">
+      <div class="brand footer-brand"><span class="brand-mark">🌊</span><span><strong>Ocean World</strong><small>Same Ocean · Brighter Tomorrow</small></span></div>
+      <div class="footer-links"><a href="#home">Home</a><a href="#destinations">Destinations</a><a href="#gallery">Gallery</a><a href="#about">About Ocean</a><a href="#contact">Contact</a></div>
+      <div class="socials"><a href="#" aria-label="YouTube">▶</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="Facebook">f</a><strong>ทะเลสวยได้... ถ้าเราช่วยกัน</strong></div>
+    </div>
+  </footer>
+
+  <dialog id="detailDialog">
+    <div class="dialog-card">
+      <button class="dialog-close" id="dialogClose" aria-label="ปิด">×</button>
+      <p class="eyebrow">OCEAN DESTINATION</p>
+      <h3 id="dialogTitle">Maya Bay</h3>
+      <p id="dialogText">สำรวจภูมิทัศน์ชายฝั่ง น้ำทะเลใส และเรื่องราวของสถานที่แห่งนี้</p>
+      <button class="pill-btn" id="dialogAction">กลับไปชมสถานที่อื่น <span>→</span></button>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
